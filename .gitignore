@@ -1,0 +1,3 @@
+# 项目排除路径
+/parent/cloud_01_eureka_server/target/
+/parent/cloud_02_eureka_client/target/
