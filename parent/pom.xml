@@ -12,6 +12,8 @@
         <module>cloud_01_eureka_server</module>
         <module>cloud_02_eureka_client</module>
         <module>cloud_03_consul_client</module>
+        <module>cloud_04_consul_users</module>
+        <module>cloud_04_consul_orders</module>
     </modules>
 
     <parent>

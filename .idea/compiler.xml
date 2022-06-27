@@ -6,9 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cloud_02_eureka_client" />
         <module name="cloud_01_eureka_server" />
         <module name="cloud_03_consul_client" />
+        <module name="cloud_04_consul_orders" />
+        <module name="cloud_02_eureka_client" />
+        <module name="cloud_04_consul_users" />
       </profile>
     </annotationProcessing>
   </component>
@@ -17,6 +19,8 @@
       <module name="cloud_01_eureka_server" options="-parameters" />
       <module name="cloud_02_eureka_client" options="-parameters" />
       <module name="cloud_03_consul_client" options="-parameters" />
+      <module name="cloud_04_consul_orders" options="-parameters" />
+      <module name="cloud_04_consul_users" options="-parameters" />
       <module name="parent" options="-parameters" />
     </option>
   </component>
