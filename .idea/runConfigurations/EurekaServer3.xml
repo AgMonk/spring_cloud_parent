@@ -1,0 +1,17 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="EurekaServer3" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <option name="ACTIVE_PROFILES" />
+    <module name="cloud_01_eureka_server" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.gin.EurekaServerApplication" />
+    <option name="VM_PARAMETERS" value="-Dspring.profiles.active=server-3" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.gin.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
