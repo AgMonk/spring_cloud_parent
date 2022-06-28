@@ -50,4 +50,9 @@ public class CategoryController {
     public String obj(){
         return productClient.obj(new Product(1,"名称",1.2,11111L));
     }
+
+    @GetMapping("array")
+    public String array(){
+        return productClient.array(new String[]{"1","3","2"});
+    }
 }

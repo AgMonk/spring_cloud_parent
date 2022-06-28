@@ -5,6 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @author : ginstone
  * @version : v1.0.0
@@ -38,5 +40,11 @@ public class ProductController {
     public String obj(@RequestBody Product product){
         log.info("{}",product);
         return "对象参数： "+port;
+    }
+
+    @GetMapping("array")
+    public String array(String[] ids){
+        log.info("{}", List.of(ids));
+        return "array: "+port;
     }
 }

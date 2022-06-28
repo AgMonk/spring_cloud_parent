@@ -23,4 +23,7 @@ public interface ProductClient {
 
     @PostMapping("obj")
     String obj(@RequestBody Product product);
+
+    @GetMapping("array")
+    String array(@RequestParam String[] ids);
 }
