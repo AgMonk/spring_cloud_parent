@@ -1,7 +1,9 @@
 package com.gin.controller;
 
+import com.gin.entity.Product;
 import com.gin.feignclient.ProductClient;
 import lombok.RequiredArgsConstructor;
+import org.springframework.aop.config.PointcutComponentDefinition;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -42,5 +44,10 @@ public class CategoryController {
     @GetMapping("/path/{name}/{age}")
     public String path(@PathVariable String name, @PathVariable Integer age){
         return productClient.path(name, age);
+    }
+
+    @GetMapping("obj")
+    public String obj(){
+        return productClient.obj(new Product(1,"名称",1.2,11111L));
     }
 }

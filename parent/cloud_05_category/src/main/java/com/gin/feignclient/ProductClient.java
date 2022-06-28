@@ -1,9 +1,8 @@
 package com.gin.feignclient;
 
+import com.gin.entity.Product;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author : ginstone
@@ -21,4 +20,7 @@ public interface ProductClient {
 
     @GetMapping("/path/{name}/{age}")
     String path(@PathVariable String name, @PathVariable Integer age);
+
+    @PostMapping("obj")
+    String obj(@RequestBody Product product);
 }

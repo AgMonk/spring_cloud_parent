@@ -1,11 +1,9 @@
 package com.gin.controller;
 
+import com.gin.entity.Product;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author : ginstone
@@ -35,5 +33,10 @@ public class ProductController {
     @GetMapping("/path/{name}/{age}")
     public String path(@PathVariable String name,@PathVariable Integer age){
         return "path -> name: "+name+"age: "+age+" port: "+port;
+    }
+    @PostMapping("obj")
+    public String obj(@RequestBody Product product){
+        log.info("{}",product);
+        return "对象参数： "+port;
     }
 }
