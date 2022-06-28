@@ -1,12 +1,13 @@
 package com.gin.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
-import java.awt.image.DirectColorModel;
 import java.util.List;
 
 /**
@@ -16,24 +17,23 @@ import java.util.List;
  **/
 @RestController
 @RequestMapping("user")
+@RequiredArgsConstructor
 public class UserController {
 
+    public static final String ORDERS = "ORDERS";
+    private final RestTemplate restTemplate;
+    private final LoadBalancerClient loadBalancerClient;
 
     private final DiscoveryClient discoveryClient;
 
-    public UserController(DiscoveryClient discoveryClient) {
-        this.discoveryClient = discoveryClient;
-    }
-
-
+    /**
+     * 使用 ribbon 服务名 + restTemplate + 负载均衡 对服务间通信
+     * @return String
+     */
     @RequestMapping("invoke")
     public String invoke() {
-
-        final List<ServiceInstance> serviceInstances = discoveryClient.getInstances("consul-orders");
-
-
-
-        System.out.println("invoke");
-        return "invoke";
+        final String s = restTemplate.getForObject("http://" + ORDERS + "/order/demo", String.class);
+        System.out.println("s = " + s);
+        return "invoke: "+s;
     }
 }

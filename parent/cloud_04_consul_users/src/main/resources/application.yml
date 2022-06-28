@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: consul-users
+    name: USERS
   cloud:
     consul:
       host: localhost

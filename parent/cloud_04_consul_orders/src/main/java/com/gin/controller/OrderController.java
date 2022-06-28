@@ -1,5 +1,6 @@
 package com.gin.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,9 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("order")
 public class OrderController {
 
+    @Value("${server.port}")
+    private int port;
+
     @RequestMapping("demo")
-    public String demo(){
+    public String demo() {
         System.out.println("test");
-        return "Hello World";
+        return "Hello World:" + port;
     }
 }
