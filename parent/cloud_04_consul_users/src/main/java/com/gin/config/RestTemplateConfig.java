@@ -1,6 +1,7 @@
 package com.gin.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.loadbalancer.annotation.LoadBalancerClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
@@ -10,7 +11,8 @@ import org.springframework.web.client.RestTemplate;
  * @since : 2022/6/28 09:41
  **/
 @Configuration
-public class BeansConfig {
+@LoadBalancerClient(value = "ORDERS",configuration = RandomBalancerClientConfiguration.class)
+public class RestTemplateConfig {
 
 
 

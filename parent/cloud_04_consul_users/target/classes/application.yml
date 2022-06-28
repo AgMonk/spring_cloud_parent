@@ -8,7 +8,3 @@ spring:
     consul:
       host: localhost
       port: 8500
-
-#ORDERS:
-#  ribbon:
-#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
