@@ -4,6 +4,8 @@ import com.gin.feignclient.ProductClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -27,5 +29,18 @@ public class CategoryController {
         final String product = productClient.product();
         System.out.println("product = " + product);
         return "类别服务: " + port;
+    }
+
+    @GetMapping("/qs")
+    public String qs(String name,
+                     Integer age){
+        final String res = productClient.qs(name, age);
+
+        return res;
+    }
+
+    @GetMapping("/path/{name}/{age}")
+    public String path(@PathVariable String name, @PathVariable Integer age){
+        return productClient.path(name, age);
     }
 }
