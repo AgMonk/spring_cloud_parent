@@ -7,12 +7,12 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 /**
  * @author : ginstone
  * @version : v1.0.0
- * @since : 2022/6/27 16:12
+ * @since : 2022/6/28 14:57
  **/
 @SpringBootApplication
 @EnableDiscoveryClient
-public class ConsulUsersApplication {
+public class ProductApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ConsulUsersApplication.class,args);
+        SpringApplication.run(ProductApplication.class, args);
     }
 }
