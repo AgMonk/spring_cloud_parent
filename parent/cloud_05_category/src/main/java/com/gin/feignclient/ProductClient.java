@@ -26,4 +26,8 @@ public interface ProductClient {
 
     @GetMapping("array")
     String array(@RequestParam String[] ids);
+
+
+    @GetMapping("getProduct")
+    Product getProduct(@RequestParam Integer id);
 }

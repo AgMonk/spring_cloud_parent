@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.ZonedDateTime;
 import java.util.List;
 
 /**
@@ -46,5 +47,15 @@ public class ProductController {
     public String array(String[] ids){
         log.info("{}", List.of(ids));
         return "array: "+port;
+    }
+
+    @GetMapping("getProduct")
+    public Product getProduct(Integer id){
+        final Product product = new Product();
+        product.setId(id);
+        product.setName("商品名称");
+        product.setTimeCreated(ZonedDateTime.now().toEpochSecond());
+        System.out.println("id = " + id);
+        return product;
     }
 }

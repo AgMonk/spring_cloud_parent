@@ -5,10 +5,7 @@ import com.gin.feignclient.ProductClient;
 import lombok.RequiredArgsConstructor;
 import org.springframework.aop.config.PointcutComponentDefinition;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author : ginstone
@@ -54,5 +51,10 @@ public class CategoryController {
     @GetMapping("array")
     public String array(){
         return productClient.array(new String[]{"1","3","2"});
+    }
+
+    @GetMapping("getProduct")
+    public Product getProduct(Integer id){
+        return productClient.getProduct(id);
     }
 }
