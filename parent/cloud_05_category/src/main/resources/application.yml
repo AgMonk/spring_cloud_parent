@@ -8,3 +8,11 @@ spring:
     consul:
       host: localhost
       port: 8500
+feign:
+  client:
+    config:
+      default:
+        #配置指定服务连接超时
+        connectTimeout: 5000
+        #配置指定服务等待超时
+        readTimeout: 5000
