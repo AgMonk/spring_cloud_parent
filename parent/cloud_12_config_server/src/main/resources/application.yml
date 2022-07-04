@@ -1,0 +1,18 @@
+server:
+  port: 9900
+
+spring:
+  application:
+    name: CONFIGSERVER
+  cloud:
+    config:
+      #远程仓库地址
+      server:
+        git:
+          uri: https://gitee.com/AgMonk/cloud_configs.git
+          default-label: master
+          username: AgMonk
+          password: dzkjd719
+    consul:
+      host: localhost
+      port: 8500

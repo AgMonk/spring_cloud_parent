@@ -17,6 +17,7 @@
         <module>cloud_05_category</module>
         <module>cloud_05_product</module>
         <module>cloud_11_gateway</module>
+        <module>cloud_12_config_server</module>
     </modules>
 
     <parent>
