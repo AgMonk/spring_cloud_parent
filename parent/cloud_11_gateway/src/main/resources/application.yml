@@ -11,10 +11,14 @@ spring:
         - id: category_router
           uri: lb://CATEGORY
           predicates:
-            - Path=/category
+            - Path=/category/**
+          filters:
+            - StripPrefix=1
         - id: product_router
           uri: lb://PRODUCT
           predicates:
-            - Path=/product
+            - Path=/product/**
+          filters:
+            - StripPrefix=1
   application:
     name: GATEWAY
