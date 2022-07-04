@@ -18,6 +18,7 @@
         <module>cloud_05_product</module>
         <module>cloud_11_gateway</module>
         <module>cloud_12_config_server</module>
+        <module>cloud_13_config_client</module>
     </modules>
 
     <parent>

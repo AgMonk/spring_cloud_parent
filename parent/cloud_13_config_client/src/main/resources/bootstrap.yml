@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      label: master
+      name: config_client
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: CONFIGSERVER
+    consul:
+      host: localhost
+      port: 8500

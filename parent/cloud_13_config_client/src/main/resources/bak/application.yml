@@ -1,0 +1,12 @@
+server:
+  port: 8100
+
+spring:
+  application:
+    name: config_client
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+  profiles:
+    active: dev
