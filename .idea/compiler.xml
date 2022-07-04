@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cloud_01_eureka_server" />
+        <module name="cloud_11_gateway" />
         <module name="cloud_05_product" />
         <module name="cloud_03_consul_client" />
         <module name="cloud_04_consul_orders" />
@@ -26,6 +27,7 @@
       <module name="cloud_04_consul_users" options="-parameters" />
       <module name="cloud_05_category" options="-parameters" />
       <module name="cloud_05_product" options="-parameters" />
+      <module name="cloud_11_gateway" options="-parameters" />
       <module name="parent" options="-parameters" />
     </option>
   </component>

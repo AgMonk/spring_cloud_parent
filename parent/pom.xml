@@ -16,6 +16,7 @@
         <module>cloud_04_consul_orders</module>
         <module>cloud_05_category</module>
         <module>cloud_05_product</module>
+        <module>cloud_11_gateway</module>
     </modules>
 
     <parent>
