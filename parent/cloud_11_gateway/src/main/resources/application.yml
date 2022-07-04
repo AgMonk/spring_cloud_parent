@@ -9,11 +9,11 @@ spring:
     gateway:
       routes:
         - id: category_router
-          uri: http://localhost:9000
+          uri: lb://CATEGORY
           predicates:
             - Path=/category
         - id: product_router
-          uri: http://localhost:9100
+          uri: lb://PRODUCT
           predicates:
             - Path=/product
   application:
