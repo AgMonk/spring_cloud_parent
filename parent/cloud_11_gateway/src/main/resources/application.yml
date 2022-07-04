@@ -22,3 +22,8 @@ spring:
             - StripPrefix=1
   application:
     name: GATEWAY
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
