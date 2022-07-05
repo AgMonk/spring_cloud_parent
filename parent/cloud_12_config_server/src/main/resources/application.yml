@@ -2,6 +2,13 @@ server:
   port: 9900
 
 spring:
+  rabbitmq:
+    host: 81.71.92.103
+    port: 5672
+    username: ems
+    password: ems
+    virtual-host: /ems
+
   application:
     name: CONFIGSERVER
   cloud:
@@ -16,3 +23,9 @@ spring:
     consul:
       host: localhost
       port: 8500
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

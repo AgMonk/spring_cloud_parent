@@ -7,6 +7,14 @@ spring:
       discovery:
         enabled: true
         service-id: CONFIGSERVER
+      #允许启动时快速失败
+      fail-fast: true
     consul:
       host: localhost
       port: 8500
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
